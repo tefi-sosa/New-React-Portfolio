@@ -1,6 +1,7 @@
 import './App.css';
 import video from './components/video/DJI_0704-trimmed.MP4'
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
           <source src={video} type="video/mp4"/>
         </video>
       </div>
+
+      <Navbar/>
+
     </div>
   );
 }
