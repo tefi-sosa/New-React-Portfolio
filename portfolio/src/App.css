@@ -135,11 +135,44 @@ h2{
 }
 
 /* && PROJECT SECTION && */
+.vertical{
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+
+.project-div{
+  width: 100%;
+}
 
 #projects{
   margin: 50px 200px;
   min-height: 100vh;
+  display: flex;
+  
 }
+
+.accordion {
+  margin: 2rem auto;
+  color: rgb(48, 47, 47);
+}
+
+.accordion-item {
+  background-color: aliceblue;
+  padding: 15px 10px;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1.8rem;
+}
+
 
 @media only screen and (max-width: 1100px) {
   .intro{

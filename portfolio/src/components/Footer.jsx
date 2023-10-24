@@ -4,8 +4,8 @@ function Footer() {
   return (
     <section id='footer'>
       
-      <div className='logo' href='#home'>
-        <a href='#home'><h4>E S<br/>O .</h4></a>
+      <div className='logo' href='#homepage'>
+        <a href='#homepage'><h4>E S<br/>O .</h4></a>
       </div>
       <div className='contact-icons'>
         <a href='https://www.linkedin.com/in/estefania-sosa-70b63a1a8/' target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-linkedin fa-l"></i></a>
