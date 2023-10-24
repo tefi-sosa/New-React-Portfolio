@@ -1,11 +1,16 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import Accordion from './Accordion'
+import { accordionData } from './utils/content';
 
 
 export default function Projects() {
   return (
-    <div>
-      <ProjectCard/>
+    <div className='project-div'>
+      <div className="accordion">
+        {accordionData.map(({ title, content, skills, images }) => (
+          <Accordion title={title} content={content} skills={skills} images={images}/>
+        ))}
+      </div>
     </div>
   )
 }
