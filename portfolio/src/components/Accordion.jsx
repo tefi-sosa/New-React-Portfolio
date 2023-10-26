@@ -23,7 +23,7 @@ const Accordion = ({ title, content, skills, images, githublink, videolink, webs
         <div className='project-buttons'>
           <button onClick={() => window.open(githublink)} target="_blank">Github</button>
           <button onClick={() => window.open(videolink)}target="_blank">Video</button>
-          {websitelink && <button onClick={() => window.open(videolink)}target="_blank">Live Website</button>}
+          {websitelink && <button onClick={() => window.open(videolink)}target="_blank">Website</button>}
         </div>
         <ImageCarousel images={images}/>
         </div>}
