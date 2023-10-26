@@ -3,8 +3,10 @@ import { BsChevronDown } from 'react-icons/bs';
 import { BsChevronUp } from 'react-icons/bs';
 import ImageCarousel from './Carousel';
 
-const Accordion = ({ title, content, skills, images }) => {
+const Accordion = ({ title, content, skills, images, githublink, videolink, websitelink }) => {
   const [isActive, setIsActive] = useState(false);
+
+  console.log(websitelink)
 
   return (
     <div className="accordion-item">
@@ -13,9 +15,16 @@ const Accordion = ({ title, content, skills, images }) => {
         <div>{isActive ? <BsChevronUp/> : <BsChevronDown/>}</div>
       </div>
       {isActive && <div className="accordion-content">
-        <p/>{content}<p/>
-        <hr />
-        <p/>{skills}<p/>
+        <hr />        
+        <p>{content}</p>
+        <br/>
+        <p>{skills}</p>
+        <br/>
+        <div className='project-buttons'>
+          <button onClick={() => window.open(githublink)} target="_blank">Github</button>
+          <button onClick={() => window.open(videolink)}target="_blank">Video</button>
+          {websitelink && <button onClick={() => window.open(videolink)}target="_blank">Live Website</button>}
+        </div>
         <ImageCarousel images={images}/>
         </div>}
     </div>

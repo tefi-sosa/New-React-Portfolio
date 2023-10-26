@@ -20,7 +20,7 @@ function App() {
         <Title/>        
       </section>
       <section id='projects'>
-        <h2 className='vertical'>PROJECTS</h2>
+        <h2 className='vertical'>PROJECTS -</h2>
         <Projects/>
       </section>
 

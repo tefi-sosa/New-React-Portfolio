@@ -12,7 +12,8 @@ export const accordionData = [
     skills: `React | Redux | Hooks | ReactRouter | JWT | CSS | JavaScript | Axios | Express | Sequelize | Node.js | Formik | Bcrypt.js | PostgreSQL | Heroku`,
     githublink: `https://github.com/tefi-sosa/OSSIRA`,
     videolink: `https://www.youtube.com/watch?v=o2NQC87WpaU&feature=youtu.be`,
-    images: [image1, image2, image3, image4]
+    images: [image1, image2, image3, image4],
+    websitelink: 'https://ossira-50689e59e923.herokuapp.com/'
   },
   {
     title: 'WANDERLUST',
@@ -20,6 +21,7 @@ export const accordionData = [
     skills: `HTML | CSS | JavaScript | Bootstrap | Axios | Express | Node.js | PostgreSQL | Heroku`,
     githublink: `https://github.com/tefi-sosa/Foundations-FinalProject`,
     videolink: `https://youtu.be/WjzjiHF6Uas`,
-    images: [image5, image6]
+    images: [image5, image6],
+    websitelink: false
   },
 ];
