@@ -8,7 +8,7 @@ function navbar() {
   return (
     <>
       {['sm'].map((expand) => (
-        <Navbar key={expand} fixed="bottom" expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar collapseOnSelect key={expand} fixed="bottom" expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
             <p></p>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
