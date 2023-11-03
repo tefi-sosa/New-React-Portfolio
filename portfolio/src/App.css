@@ -132,6 +132,34 @@ h2{
   margin-right: 50px;
 }
 
+/* && ABOUT SECTION && */
+
+#about{
+  margin: 0px 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+}
+
+.divided-container{
+  display: flex;
+  justify-content: end;
+  gap: 100px;
+}
+
+.left-half{
+  text-align: right;
+}
+
+.right-half{
+  width: 50%;
+  text-align: left;
+}
+
 /* && PROJECT SECTION && */
 .vertical{
   padding-bottom: 30px;
