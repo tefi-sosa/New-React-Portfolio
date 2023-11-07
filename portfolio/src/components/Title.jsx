@@ -5,7 +5,7 @@ export default function Title() {
     <div id='title'>
       <p className='intro'>Hi, I'm</p>
       <h1 className='name'>ESTEFANIA SOSA</h1>
-      <h2>FULL STACK DEVELOPER -</h2>
+      <h2 className='left-aligned'>FULL STACK DEVELOPER -</h2>
     </div>
   )
 }

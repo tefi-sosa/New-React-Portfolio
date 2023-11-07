@@ -1,32 +1,18 @@
 import React from 'react'
 import EducationList from './EducationList'
 import { info } from './utils/education'
+import { IoDocumentSharp } from 'react-icons/io5';
 
 function Education() {
-  // const info = [
-  //   {
-  //     name: 'AWS Certified Cloud Practitioner',
-  //     school: 'AWS Training and Certification',
-  //     date: '2023'
-  //   },
-  //   {
-  //     name: 'Certificate in Web Development',
-  //     school: 'Devmountain',
-  //     date: '2022'
-  //   },
-  //   {
-  //     name: 'BS in Exercise Physiology',
-  //     school: 'Brigham Young University Idaho',
-  //     date: '2020'
-  //   }
-  // ];
-
   return (
-    <>
-      {info.map(({name, school, date}) => (
-        <EducationList name={name} school={school} date={date}/>
-      ))}
-    </>
+    <div className='education'>
+      <IoDocumentSharp size={80} className='resume-icon' onClick={() => window.open('https://docs.google.com/document/d/13fQjLiGR40HIMCNjS-_0wDZlikgZgivsJHUvbvlSBBc/edit?usp=sharing')} target="_blank"/>
+      <div className=''>
+        {info.map(({name, school, date}) => (
+          <EducationList name={name} school={school} date={date}/>
+        ))}        
+      </div>
+    </div>
   )
 }
 

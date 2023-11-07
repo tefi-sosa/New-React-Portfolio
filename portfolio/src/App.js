@@ -6,6 +6,7 @@ import Title from './components/Title';
 import Projects from './components/Projects';
 import Education from './components/Education';
 
+
 function App() {
   return (
     <div className="app">
@@ -25,7 +26,7 @@ function App() {
         <Projects/>
       </section>
       <section id='education'>
-        <h2>EDUCATION</h2>
+        <h2 className='half section-title'>EDUCATION</h2>
         <Education/>
       </section>
 
