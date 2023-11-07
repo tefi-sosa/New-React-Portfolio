@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Title from './components/Title';
 import Projects from './components/Projects';
 import Education from './components/Education';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -29,7 +30,10 @@ function App() {
         <h2 className='half section-title'>EDUCATION</h2>
         <Education/>
       </section>
-
+      <section id='contact'>
+        <h2 className='half section-title'>CONTACT</h2>
+        <Contact/>
+      </section>
 
 
       
