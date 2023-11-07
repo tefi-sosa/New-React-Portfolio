@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Title from './components/Title';
 import Projects from './components/Projects';
+import Education from './components/Education';
+
 
 function App() {
   return (
@@ -22,6 +24,10 @@ function App() {
       <section id='projects'>
         <h2 className='vertical'>PROJECTS -</h2>
         <Projects/>
+      </section>
+      <section id='education'>
+        <h2 className='half section-title'>EDUCATION</h2>
+        <Education/>
       </section>
 
 
