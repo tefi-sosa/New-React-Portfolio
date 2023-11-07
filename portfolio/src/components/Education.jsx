@@ -7,7 +7,7 @@ function Education() {
   return (
     <div className='education'>
       <IoDocumentSharp size={80} className='resume-icon' onClick={() => window.open('https://docs.google.com/document/d/13fQjLiGR40HIMCNjS-_0wDZlikgZgivsJHUvbvlSBBc/edit?usp=sharing')} target="_blank"/>
-      <div className=''>
+      <div className='education-list'>
         {info.map(({name, school, date}) => (
           <EducationList name={name} school={school} date={date}/>
         ))}        
