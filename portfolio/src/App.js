@@ -23,15 +23,22 @@ function App() {
         <Title/>        
       </section>
       <section id='projects'>
-        <h2 className='vertical'>PROJECTS -</h2>
+
+        <h2>PROJECTS</h2> 
+        <hr/>               
         <Projects/>
+        <h2>MINOR PROJECTS</h2>
+        <hr/>
       </section>
       <section id='education'>
         <h2 className='half section-title'>EDUCATION</h2>
+        <hr/>
         <Education/>
       </section>
+
       <section id='contact'>
         <h2 className='half section-title'>CONTACT</h2>
+        <hr/>
         <Contact/>
       </section>
 
