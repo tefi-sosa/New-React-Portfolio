@@ -6,6 +6,7 @@ import Title from './components/Title';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import MinorProjects from './components/MinorProjects';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
         <hr/>               
         <Projects/>
         <h2>MINOR PROJECTS</h2>
-        <hr/>
+        <hr/>        
+        <MinorProjects/>
       </section>
       <section id='education'>
         <h2 className='half section-title'>EDUCATION</h2>
