@@ -318,6 +318,7 @@ h3{
 .closeBtn {
   color: #eee;
   color: rgb(48, 47, 47);
+  margin-left: 20px;
   font-size: 1.8rem;
   position: sticky;
   z-index: 50;
@@ -451,6 +452,19 @@ h3{
   #contact{
     margin-bottom: 150px;
   }
+  .thumbnail{
+    width: 200px;
+    max-height: 93px;
+  }
+  .project-buttons{
+    padding: 0;
+  }
+  .project-buttons-black{
+    padding: 10px 35px;
+  }
+  .divided-container{
+    gap: 20px;
+  }
   h3{
     font-size: 1.8rem;
   }
@@ -479,12 +493,27 @@ h3{
   h3{
     font-size: 1.4rem;
   }
+  .project-list-item{
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0px;
+  }
+  .modal-test{
+    margin: 0;
+  }
+  .content{
+    padding: 10px;
+  }
   .project-buttons{
+    flex-direction: column;
     padding: 0;
-    gap: 2px;
+    gap: 10px;
   }
   button{
     padding: 5px 15px;
+  }
+  .right-half{
+    width: auto;
   }
   .education{
     flex-direction: column;
