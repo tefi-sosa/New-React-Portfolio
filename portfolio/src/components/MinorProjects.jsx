@@ -5,7 +5,7 @@ const MinorProjects = () => {
   return (
     <div className='minor-projects-container'>
       {smallProjects.map(({name, GitHubLink}) => (
-        <button onClick={() => window.open(GitHubLink)}target="_blank">{name}</button>
+        <button className="small-project-btn" onClick={() => window.open(GitHubLink)}target="_blank">{name}</button>
       )      
       )}
     </div>

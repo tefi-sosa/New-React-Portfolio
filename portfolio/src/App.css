@@ -81,6 +81,25 @@ video{
   gap: 10px;
 }
 
+i{
+  transition: .5s;
+}
+
+i::before{
+  transform: scale(.9);
+  z-index: -1;
+}
+
+i:hover::before {
+  transform: scale(1.1);
+}
+
+i:hover {
+  color: #ffffff;
+  /* text-shadow: 0 0 10px #eee; */
+  transform: scale(1.5);
+}
+
 i, h4{
   color: #ffffff;
   font-weight: 400;
@@ -109,6 +128,15 @@ div.offcanvas-body a{
 
 body.modal-open a{
   color: black!important;
+}
+
+.nav-link{
+  transition: .5s;
+}
+
+.nav-link:hover{
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
 }
 
 /* ----------------------------------------------- */
@@ -153,6 +181,7 @@ body.modal-open a{
 
 .project-div{
   width: 100%;
+  margin-bottom: 50px;
 }
 
 #projects{
@@ -266,6 +295,13 @@ h3{
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+  transition: .5s;
+}
+
+.project-list-item:hover{
+  cursor: pointer;
+  /* transform: scale(1.2); */
+  transform: translateX(2em)
 }
 
 .thumbnail{
@@ -383,14 +419,19 @@ h3{
   display: flex;
   justify-content: center;
   gap: 25px;
-  flex-wrap: wrap;
+  width: 100%;
+}
+
+.small-project-btn{
+  padding: 10px 0;
+  width: 25%;
 }
 
 /* ----------------------------------------------- */
 /*  && EDUCATION SECTION && */
 
 #education{
-  margin: 0 200px 100px 200px;
+  margin: 0 200px 0px 200px;
   padding: 50px 0;
 }
 
@@ -418,6 +459,25 @@ h3{
   padding-left: 50%;
 }
 
+.separator-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.separator{
+  height: 5px;
+  width: 50px;
+  background-color: #eeeeee7e;
+}
+
+.middle{
+  width: 20%;
+}
+
 /* ----------------------------------------------- */
 /* && CONTACT SECTION && */
 
@@ -427,7 +487,7 @@ h3{
 }
 
 #contact{
-  margin: 0 200px 150px 200px;
+  margin: 50px 200px 150px 200px;
 }
 
 .form-row, .form-group{
@@ -472,6 +532,12 @@ h3{
   .project-buttons-black{
     padding: 10px 35px;
   }
+  .minor-projects-container{
+    flex-wrap: wrap;
+  }
+  .small-project-btn{
+    /* padding: 10px 35px; */
+  }
   .divided-container{
     gap: 20px;
   }
@@ -492,8 +558,11 @@ h3{
   }
   #projects, #education, #contact{
     flex-direction: column;
-    margin: 10px 25px;
+    margin: 10px 25px 10px 65px;
     padding: 15px;
+  }
+  #contact{
+    margin-bottom: 100px;
   }
   .vertical{
     padding-bottom: 0px;
@@ -505,7 +574,8 @@ h3{
   }
   .project-list-item{
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-end; */
+    align-items: flex-start;
     gap: 0px;
   }
   .modal-test{
@@ -514,10 +584,14 @@ h3{
   .content{
     padding: 10px;
   }
-  .project-buttons{
+  .project-buttons, .minor-projects-container{
     flex-direction: column;
     padding: 0;
+    width: 100%;
     gap: 10px;
+  }
+  .small-project-btn{
+    width: 100%;
   }
   button{
     padding: 5px 15px;

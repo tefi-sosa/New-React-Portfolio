@@ -37,7 +37,11 @@ function App() {
         <hr/>
         <Education/>
       </section>
-
+      <div className='separator-container'>
+        <div className='separator'></div>
+        <div className='separator middle'></div>
+        <div className='separator'></div>
+      </div>
       <section id='contact'>
         <h2 className='half section-title'>CONTACT</h2>
         <hr/>
