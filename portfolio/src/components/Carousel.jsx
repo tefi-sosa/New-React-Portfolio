@@ -16,7 +16,7 @@ export default function ImageCarousel(images) {
   // console.log(array)
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel className='carousel1' activeIndex={index} onSelect={handleSelect}>
       {array.map((src) => (
               <Carousel.Item>
               <img className='w-100' src={src} alt='Project slides'/>

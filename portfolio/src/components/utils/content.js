@@ -8,6 +8,7 @@ import image6 from '../images/wanderlust2.png'
 export const accordionData = [
   {
     title: 'OSSIRA',
+    date: '2022',
     content: `Developed an eCommerce site that features a modern user interface for efficient search, purchase of products, and management of purchases/wishlist items`,
     skills: `React | Redux | Hooks | ReactRouter | JWT | CSS | JavaScript | Axios | Express | Sequelize | Node.js | Formik | Bcrypt.js | PostgreSQL | Heroku`,
     githublink: `https://github.com/tefi-sosa/OSSIRA`,
@@ -17,6 +18,7 @@ export const accordionData = [
   },
   {
     title: 'WANDERLUST',
+    date: '2022',
     content: `Developed a hiking application specific to the geographical location of Argentina to facilitate convenience and awareness surrounding hiking trails in the area`,
     skills: `HTML | CSS | JavaScript | Bootstrap | Axios | Express | Node.js | PostgreSQL | Heroku`,
     githublink: `https://github.com/tefi-sosa/Foundations-FinalProject`,

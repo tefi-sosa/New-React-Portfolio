@@ -5,13 +5,14 @@ import { IoDocumentSharp } from 'react-icons/io5';
 
 function Education() {
   return (
-    <div className='education'>
-      <IoDocumentSharp size={80} className='resume-icon' onClick={() => window.open('https://docs.google.com/document/d/13fQjLiGR40HIMCNjS-_0wDZlikgZgivsJHUvbvlSBBc/edit?usp=sharing')} target="_blank"/>
+    <div className='education' data-aos="fade"
+    data-aos-duration="1000">
+      <IoDocumentSharp size={200} className='resume-icon' onClick={() => window.open('https://docs.google.com/document/d/13fQjLiGR40HIMCNjS-_0wDZlikgZgivsJHUvbvlSBBc/edit?usp=sharing')} target="_blank"/>
       <div className='education-list'>
-      <button>RESUME</button>
-        {info.map(({name, school, date}) => (
-          <EducationList name={name} school={school} date={date}/>
-        ))}        
+        <button className='resume-btn'>RESUME</button>
+          {info.map(({name, school, date}) => (
+            <EducationList name={name} school={school} date={date}/>
+          ))}        
       </div>
     </div>
   )
