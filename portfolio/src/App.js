@@ -24,31 +24,44 @@ function App() {
         <Title/>        
       </section>
       <section id='projects'>
-
-        <h2>PROJECTS</h2> 
-        <hr/>               
+        <h2       data-aos="fade"
+      data-aos-duration="2000"
+      >PROJECTS</h2> 
+        <hr data-aos="fade"
+      data-aos-duration="2000"
+      />               
         <Projects/>
-        <h2>MINOR PROJECTS</h2>
-        <hr/>        
+        <h2 data-aos="fade"
+      data-aos-duration="2000"
+      >MINOR PROJECTS</h2>
+        <hr data-aos="fade"
+      data-aos-duration="2000"
+      />        
         <MinorProjects/>
       </section>
       <section id='education'>
-        <h2 className='half section-title'>EDUCATION</h2>
-        <hr/>
+        <h2 className='half section-title' data-aos="fade"
+      data-aos-duration="2000"
+      >EDUCATION</h2>
+        <hr className='half-line half' data-aos="fade"
+      data-aos-duration="2000"
+      />
         <Education/>
       </section>
-      <div className='separator-container'>
+      {/* <div className='separator-container'>
         <div className='separator'></div>
         <div className='separator middle'></div>
         <div className='separator'></div>
-      </div>
+      </div> */}
       <section id='contact'>
-        <h2 className='half section-title'>CONTACT</h2>
-        <hr/>
+        <h2 className='half-left section-title' data-aos="fade"
+      data-aos-duration="2000"
+      >CONTACT</h2>
+        <hr data-aos="fade"
+      data-aos-duration="2000"
+      />
         <Contact/>
       </section>
-
-
       
 
     </div>

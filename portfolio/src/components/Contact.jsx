@@ -1,17 +1,25 @@
 import React from 'react'
 import EmailForm from './EmailForm'
+import Accordion from './SmallAccordion'
 
 const Contact = () => {
   return (
-    <div className='half'>
-      <h4>—</h4>
-      {/* <p>Email</p>
-      <h4>estefi.monumental@gmail.com</h4>
-      <h4>—</h4>
-      <p>Location</p>
-      <h4>Salt Lake City, UT</h4>
-      <h4>—</h4> */}
-      <EmailForm/>
+    <div className='contact-container'>
+      <div className='half-left'       data-aos="fade"
+      data-aos-duration="1500">
+        {/* <Accordion/> */}
+        <h4>—</h4>
+        <EmailForm/>
+      </div>
+      <div className='personal-info' data-aos="fade"
+      data-aos-duration="1500">
+        <p>Location</p>
+        <p><b>Salt Lake City, UT</b></p>      
+        <p>Email</p>
+        <p><b>estefi.monumental@gmail.com</b></p>
+        <p>Social Networks</p>
+        <button onClick={() => window.open('https://www.linkedin.com/in/estefania-sosa-70b63a1a8/')} target="_blank">Linkedin</button><button onClick={() => window.open('https://github.com/tefi-sosa')} target="_blank">Github</button>
+      </div>
     </div>
   )
 }

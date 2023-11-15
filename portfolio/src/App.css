@@ -153,6 +153,7 @@ body.modal-open a{
 
 .intro{
   padding-left: 100px;
+  /* animation: slideInFromRight 1400ms ease-in; */
 }
 
 #title{
@@ -169,12 +170,36 @@ body.modal-open a{
   text-align: center;
   font-weight: 300!important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /* animation: slideInFromRight 1400ms ease-in; */
 }
 
 .left-aligned{
   text-align: right;
   margin-right: 50px;
+  /* animation: slideInFromLeft 1800ms ease-in; */
 }
+
+/* @keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
 
 /* ----------------------------------------------- */
 /* && PROJECT SECTION && */
@@ -430,6 +455,10 @@ h3{
 /* ----------------------------------------------- */
 /*  && EDUCATION SECTION && */
 
+.half-line{
+  width: 50%;
+}
+
 #education{
   margin: 0 200px 0px 200px;
   padding: 50px 0;
@@ -438,12 +467,17 @@ h3{
 .education{
   display: flex;
   align-items: center;
+  margin-top: 50px;
+}
+
+.resume-btn{
+  margin-bottom: 15px;
 }
 
 .resume-icon{
   text-align: center;
   size: 80;
-  margin: 0 calc(25% - 40px);
+  margin: 0 calc(25% - 100px);
 }
 
 .resume-icon:hover{
@@ -456,7 +490,7 @@ h3{
 }
 
 .half{
-  padding-left: 50%;
+  margin-left: 50%;
 }
 
 .separator-container{
@@ -482,12 +516,29 @@ h3{
 /* && CONTACT SECTION && */
 
 .half-left{
-  padding-right: 50%;
-  text-align: end;
+  /* padding-right: 50%; */
+  /* text-align: end; */
+  width: 50%;
+  padding-right: 50px;
 }
 
 #contact{
   margin: 50px 200px 150px 200px;
+}
+
+.contact-container{
+  display: flex;
+}
+
+.personal-info{
+  width: 50%;
+  /* padding-left: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: solid 1px
 }
 
 .form-row, .form-group{
@@ -535,9 +586,6 @@ h3{
   .minor-projects-container{
     flex-wrap: wrap;
   }
-  .small-project-btn{
-    /* padding: 10px 35px; */
-  }
   .divided-container{
     gap: 20px;
   }
@@ -550,11 +598,17 @@ h3{
 }
 
 @media only screen and (max-width: 700px) {
+  #footer{
+    left: 25px
+  }
   .intro{
     padding-left: 25px;
   }
   .name{
     font-size: 4rem;
+  }
+  .left-aligned{
+    font-size: 0.9rem;
   }
   #projects, #education, #contact{
     flex-direction: column;
@@ -573,10 +627,14 @@ h3{
     font-size: 1.4rem;
   }
   .project-list-item{
-    flex-direction: column;
+    /* flex-direction: column; */
     /* align-items: flex-end; */
     align-items: flex-start;
-    gap: 0px;
+    gap: 20px;
+  }
+  .thumbnail{
+    width:150px;
+    max-height: 69px;
   }
   .modal-test{
     margin: 0;
@@ -593,9 +651,6 @@ h3{
   .small-project-btn{
     width: 100%;
   }
-  button{
-    padding: 5px 15px;
-  }
   .right-half{
     width: auto;
   }
@@ -604,14 +659,28 @@ h3{
     align-items: end;
   }
   .resume-icon{
-    margin-bottom: 25px;
+    color: transparent;
+    position: absolute;
+    right: 700px;
   }
   .education-list{
     max-width: 100%;
   }
-  .half, .half-left{
-    padding-left: 0;
+  .half, .half-left, .half-line{
+    margin-left: 0;
     text-align: end;
+    width: 100%;
+  }
+  .contact-container{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .personal-info{
+    width: 100%;
+    padding: 50px 0;
+  }
+  .half-left{
+    padding-right: 0;
   }
 }
 

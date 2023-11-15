@@ -7,7 +7,9 @@ import ProjectList from './ProjectList';
 export default function Projects({ open, onClose }) {
   return (
     <div className='project-div'>
-      <div className="accordion">
+      <div className="accordion"       data-aos="fade"
+      data-aos-duration="1000"
+      >
 
         {accordionData.map(({ title, date, content, skills, images, githublink, videolink, websitelink }) => (
             <ProjectList title={title} date={date} content={content} skills={skills} images={images} githublink={githublink} videolink={videolink} websitelink={websitelink}/>
