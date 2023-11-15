@@ -18,7 +18,7 @@ const Contact = () => {
         <p>Email</p>
         <p><b>estefi.monumental@gmail.com</b></p>
         <p>Social Networks</p>
-        <button onClick={() => window.open('https://www.linkedin.com/in/estefania-sosa-70b63a1a8/')} target="_blank">Linkedin</button><button onClick={() => window.open('https://github.com/tefi-sosa')} target="_blank">Github</button>
+        <p><b onClick={() => window.open('https://www.linkedin.com/in/estefania-sosa-70b63a1a8/')} target="_blank">Linkedin </b><b onClick={() => window.open('https://github.com/tefi-sosa')} target="_blank"> Github</b></p>
       </div>
     </div>
   )
