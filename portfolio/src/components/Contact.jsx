@@ -1,6 +1,5 @@
 import React from 'react'
 import EmailForm from './EmailForm'
-import Accordion from './SmallAccordion'
 
 const Contact = () => {
   return (
@@ -18,7 +17,10 @@ const Contact = () => {
         <p>Email</p>
         <p><b>estefi.monumental@gmail.com</b></p>
         <p>Social Networks</p>
-        <p><b onClick={() => window.open('https://www.linkedin.com/in/estefania-sosa-70b63a1a8/')} target="_blank">Linkedin </b><b onClick={() => window.open('https://github.com/tefi-sosa')} target="_blank"> Github</b></p>
+        <p>
+          <a href="https://www.linkedin.com/in/estefania-sosa-70b63a1a8/" target="_blank" rel="noreferrer noopener"><b>Linkedin -</b></a>
+          <a href="https://github.com/tefi-sosa" target="_blank" rel="noreferrer noopener"><b> Github</b></a>
+        </p>
       </div>
     </div>
   )

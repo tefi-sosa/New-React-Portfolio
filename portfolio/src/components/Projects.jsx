@@ -8,7 +8,7 @@ export default function Projects({ open, onClose }) {
   return (
     <div className='project-div'>
       <div className="accordion"       data-aos="fade"
-      data-aos-duration="1000"
+      data-aos-duration="1500"
       >
 
         {accordionData.map(({ title, date, content, skills, images, githublink, videolink, websitelink }) => (

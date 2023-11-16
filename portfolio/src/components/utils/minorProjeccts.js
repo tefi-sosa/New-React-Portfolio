@@ -5,6 +5,7 @@ export const smallProjects = [
   },
   {
     name: 'Old Portfolio',
+    websiteLink: 'https://estefania-sosa-portfolio.netlify.app',
     GitHubLink: 'https://github.com/tefi-sosa/react-portfolio',
   },
   {
@@ -12,7 +13,8 @@ export const smallProjects = [
     GitHubLink: 'https://github.com/tefi-sosa/Coding-Challenges',
   },
   {
-    name: 'Accordion',
-    GitHubLink: 'https://github.com/tefi-sosa?tab=repositories',
+    name: 'Tic Tac Toe',
+    websiteLink: 'https://sosa-tictactoe.netlify.app/',
+    GitHubLink: 'https://github.com/tefi-sosa/tic-tac-toe',
   }
 ];

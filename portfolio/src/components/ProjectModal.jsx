@@ -18,7 +18,7 @@ const ProjectModal = ({onClose, date , title, content, skills, images, githublin
       <div className='project-buttons'>
           <button className='project-buttons-black' onClick={() => window.open(githublink)} target="_blank">Github</button>
           <button className='project-buttons-black' onClick={() => window.open(videolink)}target="_blank">Video</button>
-          {websitelink && <button className='project-buttons-black' onClick={() => window.open(videolink)}target="_blank">Website</button>}
+          {websitelink && <button className='project-buttons-black' onClick={() => window.open(websitelink)}target="_blank">Website</button>}
         </div>
       <ImageCarousel className='carousel1' images={images}/>
         <div className='divided-container'>
