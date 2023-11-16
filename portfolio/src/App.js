@@ -1,5 +1,7 @@
 import './App.css';
 import video from './components/video/DJI_0704-trimmed.MP4'
+import video1 from './components/video/DJI_0704-trimmed.webm'
+import video2 from './components/video/DJI_0704-trimmed.ogv'
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Title from './components/Title';
@@ -16,8 +18,10 @@ function App() {
       <Footer></Footer>
       <Navbar/>
        <div className="hero">
-        <video autoPlay loop muted play-inline="true" className="back-video">
+        <video autoPlay loop muted playsInline disablePictureInPicture preload='true' className="back-video">
           <source src={video} type="video/mp4"/>
+          <source src={video1} type="video/webm"/>
+          <source src={video2} type="video/ogv"/>
         </video>
       </div>     
       <section id='homepage'>
@@ -48,11 +52,6 @@ function App() {
       />
         <Education/>
       </section>
-      {/* <div className='separator-container'>
-        <div className='separator'></div>
-        <div className='separator middle'></div>
-        <div className='separator'></div>
-      </div> */}
       <section id='contact'>
         <h2 className='half-left section-title' data-aos="fade"
       data-aos-duration="2000"
