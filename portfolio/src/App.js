@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import video from './components/video/DJI_0704-trimmed.MP4'
 import video1 from './components/video/DJI_0704-trimmed.webm'
@@ -12,11 +13,36 @@ import MinorProjects from './components/MinorProjects';
 
 
 function App() {
+
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      setShow(false); 
+    } else { // if scroll up show the navbar
+      setShow(true);  
+    }
+
+    setLastScrollY(window.scrollY); 
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+
+    // cleanup function
+    return () => {
+       window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY])
+
   return (
     <div className="app">
 
       <Footer></Footer>
-      <Navbar/>
+      <div className={show ? "show" : "hidden"} >
+        <Navbar/>        
+      </div>
        <div className="hero">
         <video autoPlay loop muted playsInline disablePictureInPicture preload='true' className="back-video">
           <source src={video} type="video/mp4"/>

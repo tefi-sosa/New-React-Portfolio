@@ -1,5 +1,5 @@
 :root{
-  --fs-xl: clamp(3rem, 12vw + 1rem, 8rem);
+  --fs-xl: clamp(3rem, 12vw + 1rem, 9rem);
   --fs-p: 1rem;
   --fs-h3: 2rem;
   --fs-h4: calc(1.275rem + .3vw);
@@ -90,8 +90,8 @@ video{
   position: fixed;
   left: 40px;
   top: 0;
-  padding: 20px 0;
-  height: 100vh;
+  padding: 20px 0 30px 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -134,9 +134,44 @@ i, h4{
 
 .navbar-nav{
   gap: 25px;
+
 }
 
+/* .container-fluid{
+  transition: 1s;  
+}
+
+.container-fluid:hover{
+  background-color: #eeeeee30;
+  color: #000000!important;
+} */
+
 .fixed-bottom{
+  z-index: 3;
+}
+
+.hidden{
+  position: fixed;
+  width: 0%;
+  /* height: 50px; */
+  /* bottom: 15px; */
+  opacity: 0;
+  transition: 1s;
+  z-index: 3;
+}
+
+.show{
+  position: fixed;
+  right: 0;
+  bottom: 19px;
+  width: 600px;
+  height: 50px;
+  opacity: 1;
+  background-color: rgba(23, 20, 25, 0.6);
+  /* background: linear-gradient(rgba(23, 20, 25, 0.6),rgba(16, 16, 21, 0.7)); */
+  /* display: none; */
+  /* animation: fade-in 2000ms; */
+  transition: 1s;
   z-index: 3;
 }
 
@@ -153,17 +188,27 @@ div.offcanvas-body a{
   max-width: 75%;
 }
 
+.offcanvas-backdrop.show{
+  background-color: rgba(0,0,0,.621);
+}
+
 body.modal-open a{
   color: black!important;
 }
 
 .nav-link{
-  transition: .5s;
+  transition: .85s;
+  font-weight: 300;
+  color: #000000!important;
 }
 
 .nav-link:hover{
-  color: #ffffff;
-  text-shadow: 0 0 5px #ffffff;
+  /* color: #ffffff; */
+  /* text-shadow: 0 0 5px #ffffff; */
+  /* background-color: #eeeeee7b;
+  color: #000000!important; */
+  transform: scale(1.15);
+  font-weight: 350;
 }
 
 /* ----------------------------------------------- */
@@ -193,7 +238,7 @@ body.modal-open a{
 .name{
   font-size: var(--fs-xl);
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke: 01px;
   text-align: center;
   font-weight: 300!important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -316,6 +361,18 @@ button:hover{
   transition: all 0.4s ease 0s;
 }
 
+.back-arrow{
+  margin: 25px 0 0 25px;
+  width: 2rem;
+  height: 1.8rem;
+  align-self: flex-start;
+  color: #000000b4;
+}
+
+.back-arrow:hover{
+  cursor: pointer;
+}
+
 /* ======= */
 
 .carousel1{
@@ -346,6 +403,7 @@ h4{
 }
 
 .project-list-item{
+  width: 90%;
   display: flex;
   gap: 50px;
   flex-direction: row-reverse;
@@ -365,6 +423,7 @@ h4{
   max-height: 162px;
   object-fit: cover;
   object-position: 100% 0;
+  z-index: 0;
 }
 
 /* Modal */
@@ -412,11 +471,17 @@ h4{
   color: rgb(48, 47, 47);
   margin-left: 20px;
   font-size: 1.8rem;
-  position: sticky;
+  /* position: sticky; */
+  position: absolute;
+  right: 15px;
   z-index: 50;
-  width: 100%;
+  /* width: 100%; */
   text-align: end;
   top: 15px;
+}
+
+.closeBtn:hover{
+  cursor: pointer;
 }
 
 @keyframes slidedown {
@@ -549,8 +614,6 @@ h4{
 /* && CONTACT SECTION && */
 
 .half-left{
-  /* padding-right: 50%; */
-  /* text-align: end; */
   width: 50%;
   padding-right: 50px;
 }
@@ -586,6 +649,9 @@ h4{
 }
 
 @media only screen and (max-width: 1100px) {
+  #footer{
+    left: 3%
+  }
   .intro{
     padding-left: 50px;
   }
@@ -597,12 +663,15 @@ h4{
     text-align: left;
     /* font-size: 6rem; */
   }
+  .nav-link:hover{
+    transform: none;
+  }
   .left-aligned{
     margin-right: 25px;
   }
   #projects, #education, #contact{
     /* margin: 10px 80px; */
-    margin: 0px 3% 0 12%;
+    margin: 0px 3% 0 10%;
     /* padding: 25px; */
   }
   #contact{
@@ -621,6 +690,9 @@ h4{
   .minor-projects-container{
     /* flex-wrap: wrap; */
   }
+  .half-left{
+    padding-right: 4%;
+  }
   .divided-container{
     gap: 20px;
   }
@@ -632,6 +704,21 @@ h4{
 @media only screen and (max-width: 700px) {
   #footer{
     left: 15px
+  }
+  .show{
+    background-color:#eee;
+    bottom: 0;
+    right: 0;
+    height: auto;
+  }
+  /* .offcanvas-header {
+    display: flex!important;
+  } */
+  .navbar-nav{
+    gap: 13px;
+  }
+  .navbar-expand-sm .navbar-nav{
+    flex-direction:row;
   }
   .intro{
     padding-left: 25px;
@@ -663,8 +750,19 @@ h4{
   .modal-test{
     margin: 0;
   }
+  .closeBtn{
+    font-size: 1.5rem;
+    
+  }
+  .left-half{
+    margin-left: 25px;
+  }
+  .back-arrow{
+    margin: 45px 0 0 5px;
+  }
   .content{
     padding: 10px;
+    margin: 15px 0;
   }
   .project-buttons, .minor-projects-container{
     flex-direction: column;
@@ -710,7 +808,11 @@ h4{
   .project-list-item{
     flex-direction: column-reverse;
     align-items: flex-start;
+    width: 100%;
     gap: 10px;
+  }
+  .project-list-item:hover{
+    transform: none;
   }
   .thumbnail{
     width:100%;
