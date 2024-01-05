@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from './Modal';
 import ImageCarousel from './Carousel';
+import { HiArrowLongLeft } from "react-icons/hi2";
 
 const ProjectModal = ({onClose, date , title, content, skills, images, githublink, videolink, websitelink }) => {
 
@@ -20,7 +21,7 @@ const ProjectModal = ({onClose, date , title, content, skills, images, githublin
           <button className='project-buttons-black' onClick={() => window.open(videolink)}target="_blank">Video</button>
           {websitelink && <button className='project-buttons-black' onClick={() => window.open(websitelink)}target="_blank">Website</button>}
         </div>
-      <ImageCarousel className='carousel1' images={images}/>
+      <ImageCarousel className='carousel1' images={images} title={title}/>
         <div className='divided-container'>
           <h3 className='left-half'>-<br/>ABOUT</h3>
           <p className='right-half'>{content}</p>
@@ -30,6 +31,7 @@ const ProjectModal = ({onClose, date , title, content, skills, images, githublin
           <p className='right-half'>{skills}</p>
         </div>
     </div>
+        <HiArrowLongLeft onClick={onClose} className='back-arrow'/>    
     </Modal>
   );
 }
